@@ -9,7 +9,7 @@ namespace WebEscuelaMVC.Validation
             {
                 int numero = (int)value;
 
-                if (numero > 100)
+                if (numero <= 100)
                 {
                     return new ValidationResult("Solo se aceptan precios mayores a 100");
                 }
