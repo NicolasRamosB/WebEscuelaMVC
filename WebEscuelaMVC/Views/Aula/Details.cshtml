@@ -1,0 +1,25 @@
+﻿@model WebEscuelaMVC.Models.Aula
+
+@{
+    ViewData["Title"] = "Details Aula";
+}
+
+    <div>
+
+        <h1>
+
+        @Html.DisplayNameFor(model=>model.Numero)
+        @Html.DisplayFor(model=>model.Numero)
+
+        </h1>
+
+        <p>
+
+        @Html.DisplayNameFor(model=>model.EstadoDelTipoCadena)
+        @Html.DisplayFor(model=>model.EstadoDelTipoCadena)
+
+        </p>
+
+    @Html.ActionLink("Volver al index", "")
+
+    </div>

@@ -1,0 +1,33 @@
+﻿
+@model WebEscuelaMVC.Models.Aula
+
+
+@{
+    ViewData["Title"] = "Index Aula";
+}
+
+    <h1>Editar Aula: @Model.Numero</h1>
+
+@using (Html.BeginForm("Create", "Aula", FormMethod.Post))
+{
+
+                <div>
+
+        @Html.LabelFor(model => model.Numero)
+        @Html.TextBoxFor(model => model.Numero)
+        @Html.ValidationMessageFor(model => model.Numero)
+
+                </div>
+                <div>
+
+        @Html.LabelFor(model => model.EstadoDelTipoCadena)
+        @Html.TextBoxFor(model => model.EstadoDelTipoCadena)
+        @Html.ValidationMessageFor(model => model.EstadoDelTipoCadena)
+
+                </div>
+
+                <input type="submit" value="Editar" action="Editar" />
+
+    @Html.ActionLink("Volver al index", "Index", "Aula")
+
+}

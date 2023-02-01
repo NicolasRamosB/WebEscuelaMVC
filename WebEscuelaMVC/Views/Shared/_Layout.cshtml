@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/css/site.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header id="Top">
+        <h1>@ViewBag.Nombre</h1> 
+    </header>
+    <main>
+        <aside id="Menu"></aside>
+        <section id="Content">
+            @RenderBody()
+        </section>
+    </main>
+    <footer id="Footer"></footer>
+</body>
+</html>

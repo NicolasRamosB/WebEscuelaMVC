@@ -1,0 +1,20 @@
+﻿
+@model WebEscuelaMVC.Models.Aula
+
+@{
+    ViewData["Title"] = "Delete Aula";
+}
+        <h2>
+            Aula número: @Model.Numero
+        </h2>
+
+        <p>
+            Desea eliminar esta aula?
+        </p>
+
+@using (Html.BeginForm("Delete", "Aula", FormMethod.Post))
+{
+
+        <input type="submit" action="Delete" value="Eliminar"/>
+
+}

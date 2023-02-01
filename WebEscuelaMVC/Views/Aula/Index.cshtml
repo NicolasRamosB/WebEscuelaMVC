@@ -1,0 +1,31 @@
+﻿
+@model IEnumerable<WebEscuelaMVC.Models.Aula>
+
+
+
+    @Html.ActionLink("Nuevo","Create","Aula")
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Numero)</th>
+            <th>@Html.DisplayNameFor(model => model.EstadoDelTipoCadena)</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+           <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstadoDelTipoCadena)
+                </td>
+               
+                <td>
+                    @Html.ActionLink("Detalle","Details", "Aula", new{id=item.Id})
+                    @Html.ActionLink("Eliminar","Delete", "Aula", new{id=item.Id})
+                    @Html.ActionLink("Editar","Edit", "Aula", new{id=item.Id})
+
+                <td/>
+           </tr>
+        }
+    </table>

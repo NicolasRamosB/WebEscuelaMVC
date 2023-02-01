@@ -10,9 +10,8 @@ namespace WebEscuelaMVC.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Debes ingresar un numero")]
-        [Column(TypeName = "varchar(50)")]
         [MayorCienAtributte]
-        public string Numero { get; set; }
+        public int Numero { get; set; }
 
         [Required(ErrorMessage = "Debes ingresar un estado")]
         [Column(TypeName = "varchar(50)")]
