@@ -112,9 +112,8 @@ namespace WebEscuelaMVC.Controllers
 
         [ActionName("Edit")]
         [HttpPost]
-        public ActionResult EditConfirmed (int id) {
+        public ActionResult EditConfirmed (Aula aula) {
 
-            Aula aula = TraerUna(id);
             context.Entry(aula).State = EntityState.Modified;
             context.SaveChanges();
 
